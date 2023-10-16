@@ -7,7 +7,7 @@ import sys
 
 from mlp.layers import DropoutLayer
 from mlp.penalties import L1Penalty, L2Penalty
-parser = argparse.ArgumentParser(description='Welcome to Conv test script')
+parser = argparse.ArgumentParser(description='Welcome to penalty test script')
 
 parser.add_argument('--student_id', nargs="?", type=str, help='Your student id in the format "BXXXXXX"')
 
