@@ -3,7 +3,9 @@ import os
 import numpy as np
 
 import sys
-# sys.path.append('/path/to/mlpractical')
+sys.path.append('/Users/Pranav/Desktop/Year4/MLP/mlpracticalPrivate')
+import os; 
+os.environ["MLP_DATA_DIR"] = '/Users/Pranav/Desktop/Year4/MLP/mlpracticalPrivate'
 
 from mlp.layers import DropoutLayer
 from mlp.penalties import L1Penalty, L2Penalty
