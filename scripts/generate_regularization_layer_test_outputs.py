@@ -11,7 +11,7 @@ from mlp.layers import DropoutLayer
 from mlp.penalties import L1Penalty, L2Penalty
 parser = argparse.ArgumentParser(description='Welcome to penalty test script')
 
-parser.add_argument('--exam_id', nargs="?", type=str, help='Your exam id in the format "BXXXXXX"')
+parser.add_argument('--exam_id', nargs="?", type=str, help='Your exam id in the format "Bxxxxxxx"')
 
 args = parser.parse_args()
 
@@ -45,12 +45,12 @@ def call_grad_layer(inputs, penalty_layer, grads_wrt_outputs, weights, params=Fa
 
     return outputs
 
-def get_student_seed(exam_id):
-    student_seed_number = int(exam_id[1:])
-    return student_seed_number
+def get_exam_seed(exam_id):
+    exam_seed_number = int(exam_id[1:])
+    return exam_seed_number
 
 
-seed = get_student_seed(exam_id)
+seed = get_exam_seed(exam_id)
 rng = np.random.RandomState(seed)
 
 reg_output_dict = dict()
